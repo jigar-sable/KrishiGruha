@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import loginScreen from './screens/loginScreen'
 import registerScreen from './screens/registerScreen'
+import homeScreen from './screens/homeScreen'
 
 export default function App() {
 
@@ -22,6 +23,7 @@ export default function App() {
         }}>
         <Stack.Screen name="login" component={loginScreen} options={{title:'KrishiGruha Login'}}/>
         <Stack.Screen name="register" component={registerScreen} options={{title:'KrishiGruha Register'}}/>
+        <Stack.Screen name="home" component={homeScreen} options={{title:'KrishiGruha'}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
