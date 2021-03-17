@@ -2,6 +2,7 @@ import React from 'react'
 import { View,StyleSheet,Dimensions,ScrollView,Image,StatusBar,Button,TouchableOpacity} from 'react-native'
 import { Text } from 'react-native-elements'
 
+
 const homeScreen = ({navigation}) => {
     return (
         <View style={styles.mainContainer}>

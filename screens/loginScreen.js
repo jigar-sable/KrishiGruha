@@ -34,7 +34,7 @@ const loginScreen = ({navigation}) => {
               }
               else{
                 await AsyncStorage.setItem('token',response.data.token);
-                navigation.navigate('home')
+                navigation.navigate('mainstack')
               }
         })
         .catch(function (error) {
