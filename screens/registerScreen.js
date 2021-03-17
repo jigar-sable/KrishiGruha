@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
-import { View,StyleSheet,Dimensions,Alert } from 'react-native';
-import { Text,Image,Input,Button } from 'react-native-elements';
+import { View,StyleSheet,Dimensions,Alert,Image,StatusBar } from 'react-native';
+import { Text,Input,Button } from 'react-native-elements';
 import axios from 'axios';
 
 const registerScreen = ({navigation}) => {

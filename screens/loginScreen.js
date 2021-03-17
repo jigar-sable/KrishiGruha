@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
-import { View,StyleSheet,Dimensions,Alert } from 'react-native';
-import { Text,Image,Input,Button } from 'react-native-elements';
+import { View,StyleSheet,Dimensions,Alert,Image,StatusBar } from 'react-native';
+import { Text,Input,Button } from 'react-native-elements';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from 'axios';
 

@@ -4,9 +4,9 @@
     "slug": "KrishiGruha",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/krishi_logo.png",
+    "icon": "./assets/krishiicon.png",
     "splash": {
-      "image": "./assets/logo.png",
+      "image": "./assets/splash_image.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
