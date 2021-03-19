@@ -5,8 +5,9 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from 'axios';
 
 const loginScreen = ({navigation}) => {
+
     const[username,setUsername] = useState("");
-    const[password,setPassword] = useState(""); 
+    const[password,setPassword] = useState("");
 
     const loginHandler = () =>{
         var data = JSON.stringify({"email_username":username,"password":password});
@@ -34,7 +35,7 @@ const loginScreen = ({navigation}) => {
               }
               else{
                 await AsyncStorage.setItem('token',response.data.token);
-                navigation.navigate('mainstack')
+                navigation.replace('mainstack')
               }
         })
         .catch(function (error) {

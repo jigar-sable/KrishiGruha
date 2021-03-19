@@ -10,7 +10,7 @@ const homeScreen = ({navigation}) => {
                 <View style={styles.card}>
                     <Image style={styles.cardImage} source={require('../assets/Tomato.png')}/>
                     <View style={{paddingLeft:7}}>
-                        <Text style={{fontSize:18,marginTop:15,textAlign:'center'}}>Tomato - Rs.50/kg</Text>
+                        <Text style={{fontSize:18,marginTop:15,textAlign:'center',fontFamily:'monospace'}}>Tomato - Rs.50/kg</Text>
                         <View style={{flexDirection:'row',marginTop:15}}>
                             <TouchableOpacity onPress={()=>{navigation.navigate('buy',{item:'Tomato',buyPrice:'50',path:require('../assets/Tomato.png')})}}>
                                 <Text style={styles.buyBtn}>BUY</Text>
@@ -25,7 +25,7 @@ const homeScreen = ({navigation}) => {
                 <View style={styles.card}>
                     <Image style={styles.cardImage} source={require('../assets/Potato.png')}/>
                     <View style={{paddingLeft:7}}>
-                        <Text style={{fontSize:18,marginTop:15,textAlign:'center'}}>Potato - Rs.30/kg</Text>
+                        <Text style={{fontSize:18,marginTop:15,textAlign:'center',fontFamily:'monospace'}}>Potato - Rs.30/kg</Text>
                         <View style={{flexDirection:'row',marginTop:15}}>
                             <TouchableOpacity onPress={()=>{navigation.navigate('buy',{item:'Potato',buyPrice:'30',path:require('../assets/Potato.png')})}}>
                                 <Text style={styles.buyBtn}>BUY</Text>
@@ -40,7 +40,7 @@ const homeScreen = ({navigation}) => {
                 <View style={styles.card}>
                     <Image style={styles.cardImage} source={require('../assets/Onions.png')}/>
                     <View style={{paddingLeft:7}}>
-                        <Text style={{fontSize:18,marginTop:15,textAlign:'center'}}>Onion - Rs.30/kg</Text>
+                        <Text style={{fontSize:18,marginTop:15,textAlign:'center',fontFamily:'monospace'}}>Onion - Rs.30/kg</Text>
                         <View style={{flexDirection:'row',marginTop:15}}>
                             <TouchableOpacity onPress={()=>{navigation.navigate('buy',{item:'Onion',buyPrice:'30',path:require('../assets/Onions.png')})}}>
                                 <Text style={styles.buyBtn}>BUY</Text>
@@ -55,7 +55,7 @@ const homeScreen = ({navigation}) => {
                 <View style={styles.card}>
                     <Image style={styles.cardImage} source={require('../assets/Rice.png')}/>
                     <View style={{paddingLeft:7}}>
-                        <Text style={{fontSize:18,marginTop:15,textAlign:'center'}}>Rice - Rs.56/kg</Text>
+                        <Text style={{fontSize:18,marginTop:15,textAlign:'center',fontFamily:'monospace'}}>Rice - Rs.56/kg</Text>
                         <View style={{flexDirection:'row',marginTop:15}}>
                             <TouchableOpacity onPress={()=>{navigation.navigate('buy',{item:'Rice',buyPrice:'56',path:require('../assets/Rice.png')})}}>
                                 <Text style={styles.buyBtn}>BUY</Text>
@@ -70,7 +70,7 @@ const homeScreen = ({navigation}) => {
                 <View style={styles.card}>
                     <Image style={styles.cardImage} source={require('../assets/Wheat.png')}/>
                     <View style={{paddingLeft:7}}>
-                        <Text style={{fontSize:18,marginTop:15,textAlign:'center'}}>Wheat - Rs.35/kg</Text>
+                        <Text style={{fontSize:18,marginTop:15,textAlign:'center',fontFamily:'monospace'}}>Wheat - Rs.35/kg</Text>
                         <View style={{flexDirection:'row',marginTop:15}}>
                             <TouchableOpacity onPress={()=>{navigation.navigate('buy',{item:'Wheat',buyPrice:'35',path:require('../assets/Wheat.png')})}}>
                                 <Text style={styles.buyBtn}>BUY</Text>
@@ -91,7 +91,7 @@ const homeScreen = ({navigation}) => {
 const styles = StyleSheet.create({
     mainContainer:{
         height:Dimensions.get('window').height,
-        width:Dimensions.get('window').width,
+        width:Dimensions.get('window').width
     },
     card:{
         height:300,
@@ -113,6 +113,7 @@ const styles = StyleSheet.create({
         color:"#32a852",
         textAlign:'center',
         borderWidth:2,
+        fontFamily:'monospace',
         backgroundColor:'white',
         fontWeight:'bold',
         borderRadius:30,
@@ -126,6 +127,7 @@ const styles = StyleSheet.create({
         color:"green",
         textAlign:'center',
         borderWidth:2,
+        fontFamily:'monospace',
         backgroundColor:'white',
         fontWeight:'bold',
         borderRadius:30,

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View,Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
@@ -11,24 +11,40 @@ import buyScreen from './screens/buyScreen';
 import pastOrders from './screens/pastOrders';
 import itemsSold from './screens/itemsSold';
 
+
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
+
+
+
+function LogoTitle() {
+  return (
+    <View style={{flexDirection:'row'}}>
+          <Image
+            style={{ width:30, height: 30 }}
+            source={require('./assets/headerlogo.png')}
+          />
+          <Text style={{fontSize:20,color:'white',paddingLeft:5,fontFamily:'monospace'}}>KrishiGruha</Text>
+    </View>
+
+  );
+}
 
 function mainStack(){
   return(
     <Drawer.Navigator 
       drawerStyle={{
         backgroundColor: '#f0f0f0',
-        width:200
+        width:230
       }}
 
       drawerContentOptions={{
         style:{
-          width:197,
+          width:227,
         },
         labelStyle:{
-          fontWeight:'bold',
-          fontSize:15
+          fontSize:15,
+          fontFamily:'monospace'
         },
         activeBackgroundColor:'white',
         activeTintColor:'green',
@@ -41,9 +57,12 @@ function mainStack(){
         }
       }}
       initialRouteName="home">
-      <Drawer.Screen name="Home" component={homeScreen} />
-      <Drawer.Screen name="Past orders" component={pastOrders} />
-      <Drawer.Screen name="Items sold" component={itemsSold} />
+      <Drawer.Screen name="Home"  component={homeScreen} />
+      <Drawer.Screen name="Previous orders" component={pastOrders} />
+      <Drawer.Screen name="Items sold" component={itemsSold}/>
+      <Drawer.Screen name="Logout" options={{
+          swipeEnabled: false,
+        }} component={loginScreen}/>
     </Drawer.Navigator>
   )
 }
@@ -62,7 +81,8 @@ export default function App() {
             backgroundColor:'green',
             height:87
           },
-          headerTintColor:'white'
+          headerTintColor:'white',
+          headerTitle:props=><LogoTitle {...props}/>
         }}>
         <Stack.Screen name="login" component={loginScreen} options={{title:'Krish Gruha'}}/>
         <Stack.Screen name="register" component={registerScreen} options={{title:'Krishi Gruha'}}/>
