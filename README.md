@@ -1,5 +1,5 @@
 # KrishiGruha
-A platform made for farmers/users to buy/sell their products online at best prices.
+A platform made for farmers/customers to buy/sell their products online at the best prices.
 
 ## Technologies used :
 Android / IOS APK - React Native  
