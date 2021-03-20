@@ -58,7 +58,7 @@ function mainStack(){
       }}
       initialRouteName="home">
       <Drawer.Screen name="Home"  component={homeScreen} />
-      <Drawer.Screen name="Previous orders" component={pastOrders} />
+      <Drawer.Screen name="Your orders" component={pastOrders} />
       <Drawer.Screen name="Items sold" component={itemsSold}/>
       <Drawer.Screen name="Logout" options={{
           swipeEnabled: false,

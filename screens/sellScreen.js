@@ -21,6 +21,10 @@ const sellScreen = ({route,navigation}) => {
     },[])
 
     const formHandler = () =>{
+        if(item == ""||token == "" ||quantity == "" ||street == "" ||city == ""||pin == ""||phone == ""){
+            Alert.alert("All fields are required");
+            return;
+        }
         
         var data = JSON.stringify(
             {"itemName":item,

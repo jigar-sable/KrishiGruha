@@ -14,7 +14,8 @@ const pastOrders = ({navigation}) => {
             headers: { 
               'api_secret_key': 'dfdgh347dfnhh$$%%%%%33657667&%#$^&fdgfhgfhghgh4445yhsb@@@&*', 
               'Authorization': token
-            }
+            },
+            validateStatus:false
           };
           
           axios(config)
@@ -38,9 +39,24 @@ const pastOrders = ({navigation}) => {
         })()
     },[]);
 
+    if(orderDetails == undefined){
+        return(
+            <Text style={{textAlign:'center',paddingTop:15,paddingBottom:5,fontSize:18,fontWeight:'bold',fontFamily:'monospace'}}>No past orders found</Text>
+        )
+    }
+
     return (
         <View style={styles.mainContainer}>
-            <Text style={{paddingTop:15,paddingBottom:5,paddingLeft:15,fontSize:20,fontWeight:'bold',fontFamily:'monospace'}}>Previous Orders</Text>
+            
+                {
+                    orderDetails[0] != undefined ? 
+                    <Text style={{paddingTop:15,paddingBottom:5,paddingLeft:15,fontSize:18,fontWeight:'bold',fontFamily:'monospace'}}>
+                        {orderDetails[0]?.buyerUsername+"'s orders"}
+                    </Text>
+                    :
+                    <Text style={{textAlign:'center',paddingTop:15,paddingBottom:5,fontSize:18,fontWeight:'bold',fontFamily:'monospace'}}>Fetching past orders</Text>
+                }
+           
             <ScrollView style={{flex:1,padding:15,marginBottom:70}}>
                 {
                     orderDetails.map((order,index) => {
@@ -81,7 +97,7 @@ const pastOrders = ({navigation}) => {
                                     </Col>
                                 </Row>
                                 <Row style={{height:37}}>
-                                    <Col style={{width:80}}>
+                                    <Col style={{width:80,flexWrap:'wrap'}}>
                                         <Text style={{color:"green",fontSize:15}}>Item Price</Text>
                                     </Col>
                                     <Col>
@@ -99,7 +115,7 @@ const pastOrders = ({navigation}) => {
                             </Grid>
                         </View>
                         )
-                    })
+                    }).reverse()
                 }
 
 

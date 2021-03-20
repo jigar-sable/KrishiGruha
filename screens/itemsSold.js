@@ -14,7 +14,8 @@ const pastOrders = ({navigation}) => {
             headers: { 
               'api_secret_key': 'dfdgh347dfnhh$$%%%%%33657667&%#$^&fdgfhgfhghgh4445yhsb@@@&*', 
               'Authorization': token
-            }
+            },
+            validateStatus:false
           };
           
           axios(config)
@@ -38,10 +39,23 @@ const pastOrders = ({navigation}) => {
         })()
     },[]);
 
+    if(orderDetails == undefined){
+        return(
+            <Text style={{textAlign:'center',paddingTop:15,paddingBottom:5,fontSize:18,fontWeight:'bold',fontFamily:'monospace'}}>No items sold by you in past</Text>
+        )
+    }
+
     return (
         <View style={styles.mainContainer}>
-            <Text style={{paddingTop:15,paddingBottom:5,paddingLeft:15,fontSize:20,fontWeight:'bold',fontFamily:'monospace'}}>Items Sold</Text>
-            <ScrollView style={{flex:1,padding:15,marginBottom:70}}>
+                {
+                    orderDetails[0] != undefined ? 
+                    <Text style={{paddingTop:15,paddingBottom:5,paddingLeft:15,fontSize:18,fontWeight:'bold',fontFamily:'monospace'}}>
+                        {"Items sold by "+orderDetails[0]?.sellerUsername}
+                    </Text>
+                    :
+                    <Text style={{textAlign:'center',paddingTop:15,paddingBottom:5,fontSize:18,fontWeight:'bold',fontFamily:'monospace'}}>Fetching items sold</Text>
+                }           
+                 <ScrollView style={{flex:1,padding:15,marginBottom:70}}>
                 {
                     orderDetails.map((order,index) => {
                         return(
@@ -99,7 +113,7 @@ const pastOrders = ({navigation}) => {
                             </Grid>
                         </View>
                         )
-                    })
+                    }).reverse()
                 }
 
 
