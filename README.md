@@ -8,40 +8,32 @@ Database  -   MongoDB (Cloud Atlas)
 
 
 ## Login screen
-
-![alt text](https://github.com/sagarparker/KrishiGruha/blob/main/ScreenShots/1_login.jpg?raw=true)
+<img src="https://github.com/sagarparker/KrishiGruha/blob/main/ScreenShots/1_login.jpg" alt="drawing" width="260" height="460"/>
 
 
 ## Register screen
-
-![alt text](https://github.com/sagarparker/KrishiGruha/blob/main/ScreenShots/2_register.jpg?raw=true)
+<img src="https://github.com/sagarparker/KrishiGruha/blob/main/ScreenShots/2_register.jpg" alt="drawing" width="260" height="460"/>
 
 
 ## Homescreen 
-
-![alt text](https://github.com/sagarparker/KrishiGruha/blob/main/ScreenShots/3_homescreen.jpg?raw=true)
+<img src="https://github.com/sagarparker/KrishiGruha/blob/main/ScreenShots/3_homescreen.jpg" alt="drawing" width="260" height="460"/>
 
 
 ## Buy item screen
-
-![alt text](https://github.com/sagarparker/KrishiGruha/blob/main/ScreenShots/5_buy.jpg?raw=true)
+<img src="https://github.com/sagarparker/KrishiGruha/blob/main/ScreenShots/5_buy.jpg" alt="drawing" width="260" height="460"/>
 
 
 ## Sell item screen
-
-![alt text](https://github.com/sagarparker/KrishiGruha/blob/main/ScreenShots/6_sell.jpg?raw=true)
+<img src="https://github.com/sagarparker/KrishiGruha/blob/main/ScreenShots/6_sell.jpg" alt="drawing" width="260" height="460"/>
 
 
 ## Side drawer
-
-![alt text](https://github.com/sagarparker/KrishiGruha/blob/main/ScreenShots/7_sidedrawer.jpg?raw=true)
+<img src="https://github.com/sagarparker/KrishiGruha/blob/main/ScreenShots/7_sidedrawer.jpg" alt="drawing" width="260" height="460"/>
 
 
 ## Users past order page 
-
-![alt text](https://github.com/sagarparker/KrishiGruha/blob/main/ScreenShots/8_order.jpg?raw=true)
+<img src="https://github.com/sagarparker/KrishiGruha/blob/main/ScreenShots/8_order.jpg" alt="drawing" width="260" height="460"/>
 
 
 ## Items sold by the user on the platform
-
-![alt text](https://github.com/sagarparker/KrishiGruha/blob/main/ScreenShots/9_itemsales.jpg?raw=true)
+<img src="https://github.com/sagarparker/KrishiGruha/blob/main/ScreenShots/9_itemsales.jpg" alt="drawing" width="260" height="460"/>
